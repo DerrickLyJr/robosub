@@ -5,12 +5,14 @@ from pathlib import Path
 from computer_vision.main import image_capture
 from computer_vision import config
 
-# with current parameters give acc of +/- 20 cm. there is still a decent amount of block spots that affect readings
-
 cap0, cap1 = image_capture.camera_setup(config.LEFT_CAM_ID, config.RIGHT_CAM_ID)
 
+if config.IS_FISHEYE:
+    data = np.load(config.CALIBRATION_PATH + config.CALIBRATION_VAR_FILE_FISHEYE)
+else:
+    data = np.load(config.CALIBRATION_PATH + config.CALIBRATION_VAR_FILE)
+
 # load calibration data
-data = np.load(config.CALIBRATION_PATH + config.CALIBRATION_VAR_FILE)
 K1 = data["K1"]
 D1 = data["D1"]
 K2 = data["K2"]
@@ -32,13 +34,22 @@ def get_disparity(display):
 
     imageSize = frame0.shape[::-1]
 
-    map1x, map1y = cv2.initUndistortRectifyMap(
-        K1, D1, R1, P1, imageSize, cv2.CV_32FC1
-    )
+    if config.IS_FISHEYE:
+        map1x, map1y = cv2.fisheye.initUndistortRectifyMap(
+            K1, D1, R1, P1[:, :3], imageSize, cv2.CV_32FC1
+        )
 
-    map2x, map2y = cv2.initUndistortRectifyMap(
-        K2, D2, R2, P2, imageSize, cv2.CV_32FC1
-    )
+        map2x, map2y = cv2.fisheye.initUndistortRectifyMap(
+            K2, D2, R2, P2[:, :3], imageSize, cv2.CV_32FC1
+        )
+    else:
+        map1x, map1y = cv2.initUndistortRectifyMap(
+            K1, D1, R1, P1, imageSize, cv2.CV_32FC1
+        )
+
+        map2x, map2y = cv2.initUndistortRectifyMap(
+            K2, D2, R2, P2, imageSize, cv2.CV_32FC1
+        )
 
     frame0 = cv2.remap(frame0,  map1x, map1y, cv2.INTER_LINEAR)
     frame1 = cv2.remap(frame1,  map2x, map2y, cv2.INTER_LINEAR)
@@ -48,6 +59,7 @@ def get_disparity(display):
     num_disp = 128
     block_size = 10
     stereo = cv2.StereoSGBM_create(
+    # left_matcher = cv2.StereoSGBM_create(
         minDisparity=0,
         numDisparities=num_disp,
         blockSize=block_size,
@@ -59,11 +71,28 @@ def get_disparity(display):
         speckleRange=2
     )
 
-    disparity = stereo.compute(frame0, frame1).astype(np.float32) / 16.0
+    # disparity without wls seems to have better distance results but has more black holes in disparity map
+    disparity = stereo.compute(frame0, frame1).astype(np.float32) / 16.0 # comment out this line and uncomment below to try wls filter
 
-    # median blur to remove noise
+    # uncomment below and left_matcher above to use wls which highly reduces black blobs but seems to reduce distance accuarcy
+    # right_matcher = cv2.ximgproc.createRightMatcher(left_matcher)
+    # # compute raw disparities
+    # dispL = left_matcher.compute(frame0, frame1).astype(np.int16)
+    # dispR = right_matcher.compute(frame1, frame0).astype(np.int16)
+    # #  WLS Filter
+    # wls = cv2.ximgproc.createDisparityWLSFilter(matcher_left=left_matcher)
+    # wls.setLambda(4000)          # smoothness strength
+    # wls.setSigmaColor(1.5)       # edge sensitivity
+
+    # disparity = wls.filter(dispL, frame0, disparity_map_right=dispR)
+
+    # median blur to remove noise and black blobs
     disparity[disparity <= 0] = 0
     disparity = cv2.medianBlur(disparity.astype(np.float32), 5)
+
+    # morphological closing to remove black blobs
+    kernel = np.ones((3,3), np.uint8)
+    disparity = cv2.morphologyEx(disparity, cv2.MORPH_CLOSE, kernel)
 
     map = cv2.normalize(disparity, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
 

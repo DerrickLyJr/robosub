@@ -18,6 +18,8 @@ CALIBRATION_TEST_OUT_LEFT_PATH = os.path.join(CALIBRATION_PATH, "calibration_tun
 CALIBRATION_TEST_OUT_RIGHT_PATH = os.path.join(CALIBRATION_PATH, "calibration_tuning_images/out/right/")
 
 CALIBRATION_VAR_FILE = "stereo_calibration_pinhole.npz"
+CALIBRATION_VAR_FILE_FISHEYE = "stereo_calibration_fisheye.npz"
 
 LEFT_CAM_ID = 0
 RIGHT_CAM_ID = 2
+IS_FISHEYE = True

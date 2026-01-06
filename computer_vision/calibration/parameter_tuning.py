@@ -39,7 +39,11 @@ def rectify_images():
     imageSize = im.shape[::-1]
 
     # load the calibration results
-    data = np.load(config.CALIBRATION_PATH + config.CALIBRATION_VAR_FILE)
+    if config.IS_FISHEYE:
+        data = np.load(config.CALIBRATION_PATH + config.CALIBRATION_VAR_FILE_FISHEYE)
+    else:
+        data = np.load(config.CALIBRATION_PATH + config.CALIBRATION_VAR_FILE)
+
 
     K1 = data["K1"]
     D1 = data["D1"]
@@ -53,14 +57,22 @@ def rectify_images():
     P2 = data["P2"]
     Q = data["Q"]
 
+    if config.IS_FISHEYE:
+        map1x, map1y = cv2.fisheye.initUndistortRectifyMap(
+            K1, D1, R1, P1[:, :3], imageSize, cv2.CV_32FC1
+        )
 
-    map1x, map1y = cv2.initUndistortRectifyMap(
-        K1, D1, R1, P1, imageSize, cv2.CV_32FC1
-    )
+        map2x, map2y = cv2.fisheye.initUndistortRectifyMap(
+            K2, D2, R2, P2[:, :3], imageSize, cv2.CV_32FC1
+        )
+    else:
+        map1x, map1y = cv2.initUndistortRectifyMap(
+            K1, D1, R1, P1, imageSize, cv2.CV_32FC1
+        )
 
-    map2x, map2y = cv2.initUndistortRectifyMap(
-        K2, D2, R2, P2, imageSize, cv2.CV_32FC1
-    )
+        map2x, map2y = cv2.initUndistortRectifyMap(
+            K2, D2, R2, P2, imageSize, cv2.CV_32FC1
+        )
 
     # do remapping based on grid findings
     imgs_l = sorted(glob.glob(config.CALIBRATION_TEST_IN_LEFT_PATH + "*"))
