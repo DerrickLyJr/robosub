@@ -31,9 +31,9 @@ def draw_chess_single_cam(frame):
     # criteria used by checkerboard pattern detector.
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
  
-    rows = 6 # number of checkerboard rows.
-    columns = 9 # number of checkerboard columns.
-    world_scaling = 0.0186 # size of one chessboard square in meters
+    rows = config.CHECKER_BOARD_ROWS # number of checkerboard rows.
+    columns = config.CHECKER_BOARD_COLUMNS # number of checkerboard columns.
+    world_scaling = config.CHECKER_BOARD_SQUARE_SIZE # size of one chessboard square in meters
     shape = (rows, columns)
  
     # coordinates of squares in the checkerboard world space

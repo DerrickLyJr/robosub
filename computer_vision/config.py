@@ -23,3 +23,6 @@ CALIBRATION_VAR_FILE_FISHEYE = "stereo_calibration_fisheye.npz"
 LEFT_CAM_ID = 0
 RIGHT_CAM_ID = 2
 IS_FISHEYE = True
+CHECKER_BOARD_ROWS = 6 # inner rows
+CHECKER_BOARD_COLUMNS = 9 # inner columns
+CHECKER_BOARD_SQUARE_SIZE = 0.0186 # meters

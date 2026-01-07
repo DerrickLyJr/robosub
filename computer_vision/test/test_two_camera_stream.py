@@ -25,8 +25,8 @@ while(True):
     ret0, frame0 = cap0.read()
     ret1, frame1 = cap1.read()
     # Display the resulting frame
-    cv2.imshow('frame0', frame0)
-    cv2.imshow('frame1', frame1)
+    cv2.imshow('Left', frame0)
+    cv2.imshow('Right', frame1)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

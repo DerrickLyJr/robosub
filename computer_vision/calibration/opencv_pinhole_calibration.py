@@ -130,9 +130,9 @@ def stereo_calibrate(mtx1, dist1, mtx2, dist2, left_images, right_images, calibr
 
 if __name__ == "__main__":
 
-    rows = 6 # number of checkerboard rows.
-    columns = 9 # number of checkerboard columns.
-    world_scaling = 0.0186 # size of one chessboard square in meters
+    rows = config.CHECKER_BOARD_ROWS # number of checkerboard rows.
+    columns = config.CHECKER_BOARD_COLUMNS # number of checkerboard columns.
+    world_scaling = config.CHECKER_BOARD_SQUARE_SIZE # size of one chessboard square in meters
     calibration_parameters = (rows, columns, world_scaling)
 
     images_names = sorted(glob.glob(config.CALIBRATION_IMAGES_LEFT_PATH + "*"))
