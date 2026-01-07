@@ -1,5 +1,6 @@
 import cv2
 import subprocess
+from computer_vision import config
 
 # setup camera settings
 # don't run in a loop, will cause error: cant open camera by index when using imshow bc camera not found
@@ -24,7 +25,7 @@ def camera_setup(device0, device1):
 
 if __name__ == "__main__":
     
-    cap0, cap1 = camera_setup(0, 2)
+    cap0, cap1 = camera_setup(config.LEFT_CAM_ID, config.RIGHT_CAM_ID)
 
     while(True):
         # Capture frame-by-frame
