@@ -141,3 +141,8 @@ wls.setSigmaColor(1.5)       # edge sensitivity
 
 disparity = wls.filter(dispL, frame0, disparity_map_right=dispR)
 ```
+
+
+## Usage
+
+After all setup, calibration, and testing is finished, functions such as get_center_distance() or get_closest_obj_distance() can be used to help the robot avoid obstacles or determine its relative position to other objects. 
