@@ -145,4 +145,6 @@ disparity = wls.filter(dispL, frame0, disparity_map_right=dispR)
 
 ## Usage
 
+Any time the camera distance or angles are changed the calibration process has to be done. Note, calibration should be done in conditions closest to what will be used in competition so putting the robot with the cameras attached underwater will be ideal. 
+
 After all setup, calibration, and testing is finished, functions such as get_center_distance() or get_closest_obj_distance() can be used to help the robot avoid obstacles or determine its relative position to other objects. 
