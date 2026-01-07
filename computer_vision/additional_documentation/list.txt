@@ -1,9 +1,0 @@
-camera docs
-
-chessboard
-
-example disparity maps
-
-timing script
-
-online references

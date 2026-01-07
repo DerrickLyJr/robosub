@@ -20,11 +20,11 @@ Reference the document U20CAM-9281M-V1.1 for details of full camera operation an
     <img src="computer_vision/additional_documentation/readme_images/guvcview_trigger_setting.jpg" width="50%"> 
 </div>
 
-If no microcontroller is currently triggering FSIN then camera view will freeze and may prompt a force shutdown, if so click on "Wait". This is expected since the camera is not getting prompted to get a new frame. 
+If no microcontroller is currently triggering FSIN then camera view will freeze and may prompt a force shutdown, if so click on "Wait". This is expected since the camera is not getting prompted to get a new frame. For example trigger script see additional_documentation/camera_imter.ino.
 3. Now attach microcontroller with triggering script running. The cameras should now be capturing frames when triggered. Note, the FPS of camera may or may not match triggering rate. Testing shows that guvcview did not show camera FPS greater than 16 FPS.
 
 <div align="center">
-    <img src="computer_vision/additional_documentation/readme_images/trigger_pic.jpg" width="30%"> 
+    <img src="computer_vision/additional_documentation/readme_images/trigger_pic.jpg" width="50%"> 
 </div>
 
 ### Finding camera Id's
@@ -37,7 +37,7 @@ Next find correct camera device id's. Make sure both cameras are connected and m
 5. Open config.py and change LEFT_CAM_ID and RIGHT_CAM_ID to correct id value. Note left is the camera that is left when lens face opposite of your view and usb connector pins face you. 
 
 <div align="center">
-  <img src="computer_vision/additional_documentation/readme_images/left_cam.jpg" width="30%">
+  <img src="computer_vision/additional_documentation/readme_images/left_cam.jpg" width="50%">
 </div>
 
 6. From robosub (project root) run ```python -m computer_vision.test.test_two_camera_stream```. Verify that the "Left" and "Right" windows are marked correctly. 
@@ -49,12 +49,17 @@ Next find correct camera device id's. Make sure both cameras are connected and m
 1. Obtain checkered board. Previously tested on 10 x 7. Go to computer_vision/calibration/capture_calibration_images.py and update CHECKER_BOARD_ROWS and CHECKER_BOARD_COLUMNS. Note only count inner rows and columns for example a 10x7 board will actually be rows = 6, comuns = 9. Also update CHECKER_BOARD_SQUARE_SIZE in meters.
 
 <div align="center">
-    <img src="computer_vision/additional_documentation/readme_images/checkered_board.png" width="30%"> 
+    <img src="computer_vision/additional_documentation/readme_images/checkered_board.png" width="50%"> 
 </div>
 
 2. From project root run ```python -m computer_vision.calibration.capture_calibration_images```.
 3. You will see a live feed of the camera. Hold the checkerboard up to the cameras. Make sure the board covers 30-70% of screen and all squares are visible. Press "c" on keyboard to capture image. 
 4. If inner corners of checkerboard are found press "y" to save image for calibration, if it doesn't press "n" to discard. 
+
+<div align="center">
+    <img src="computer_vision/additional_documentation/readme_images/inner_squares_found.png" width="50%"> 
+</div>
+
 5. Continue to capture test images until script ends. Capture images with boards in different positions and orientations. Images will be saved to calibration_images_left/ and calibration_images_right/
 
 
@@ -65,6 +70,11 @@ Next find correct camera device id's. Make sure both cameras are connected and m
 4. Press "c" to capture scene. You can capture multiple scenes to use for testing with this script. Press "q" to quit. Scenes are saved to calibration_tuning_images/in/left and calibration_tuning_images/in/right/. 
 5. Run ```python -m computer_vision.calibration.parameter_tuning```. This will open the disparity map using script default values. The disparity map will be based on the captured images from step 4. By default the first image captued will be shown. To change the image used for tuning change the "test_image_index" varible in the script. Press any key to continue.
 6. Next a display of the disparity map with various values will be displayed. Key track of the best "numDisp" value. Press any key to continue. 
+
+<div align="center">
+    <img src="computer_vision/additional_documentation/readme_images/parameter_tuning.jpg" width="50%"> 
+</div>
+
 7. Next enter the best "numDisp" that you found from step 6 into the terminal running the script. Hit enter. Now disparity maps with different "blockSize" values will be shown. The disparity maps will use the "numDisp" given in the last step. This process will continue for all disparity map parameters. 
 8. Repeat step 6 and 7 for the different parameters. Continue the script process.
 9. Take note of the parameters and enter them into /computer_vision/main/stereo_vision.py. See below.
