@@ -57,7 +57,7 @@ Next find correct camera device id's. Make sure both cameras are connected and m
 4. If inner corners of checkerboard are found press "y" to save image for calibration, if it doesn't press "n" to discard. 
 
 <div align="center">
-    <img src="computer_vision/additional_documentation/readme_images/inner_squares_found.png" width="50%"> 
+    <img src="computer_vision/additional_documentation/readme_images/inner_squares_found.png" width="80%"> 
 </div>
 
 5. Continue to capture test images until script ends. Capture images with boards in different positions and orientations. Images will be saved to calibration_images_left/ and calibration_images_right/
@@ -72,7 +72,7 @@ Next find correct camera device id's. Make sure both cameras are connected and m
 6. Next a display of the disparity map with various values will be displayed. Key track of the best "numDisp" value. Press any key to continue. 
 
 <div align="center">
-    <img src="computer_vision/additional_documentation/readme_images/parameter_tuning.jpg" width="50%"> 
+    <img src="computer_vision/additional_documentation/readme_images/parameter_tuning.jpg" width="80%"> 
 </div>
 
 7. Next enter the best "numDisp" that you found from step 6 into the terminal running the script. Hit enter. Now disparity maps with different "blockSize" values will be shown. The disparity maps will use the "numDisp" given in the last step. This process will continue for all disparity map parameters. 
