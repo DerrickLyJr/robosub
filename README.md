@@ -46,7 +46,7 @@ Next find correct camera device id's. Make sure both cameras are connected and m
 
 ### Capture Calibration Images
 
-1. Obtain checkered board. Previously tested on 10 x 7. Go to computer_vision/calibration/capture_calibration_images.py and update CHECKER_BOARD_ROWS and CHECKER_BOARD_COLUMNS. Note only count inner rows and columns for example a 10x7 board will actually be rows = 6, comuns = 9. Also update CHECKER_BOARD_SQUARE_SIZE in meters.
+1. Obtain checkered board (checkerboard used is in additional_documentation folder). Previously tested on 10 x 7. Go to computer_vision/calibration/capture_calibration_images.py and update CHECKER_BOARD_ROWS and CHECKER_BOARD_COLUMNS. Note only count inner rows and columns for example a 10x7 board will actually be rows = 6, comuns = 9. Also update CHECKER_BOARD_SQUARE_SIZE in meters.
 
 <div align="center">
     <img src="computer_vision/additional_documentation/readme_images/checkered_board.png" width="50%"> 
