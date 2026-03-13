@@ -1,0 +1,90 @@
+[0.017s] Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/dlyerly/ros2_ws/src/bluerov2_gz -DCMAKE_INSTALL_PREFIX=/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz
+[0.040s] -- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)
+[0.469s] -- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.740s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.749s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.760s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.773s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.848s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.850s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.373s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.856s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.873s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.920s] -- Configuring done (1.9s)
+[1.954s] -- Generating done (0.0s)
+[1.961s] -- Build files have been written to: /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz
+[1.972s] Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/dlyerly/ros2_ws/src/bluerov2_gz -DCMAKE_INSTALL_PREFIX=/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz
+[1.973s] Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8
+[2.038s] [ 25%] [32mBuilding CXX object CMakeFiles/imu_listener.dir/scripts/imu_listener.cpp.o[0m
+[2.039s] [ 50%] [32mBuilding CXX object CMakeFiles/teleop_node.dir/scripts/teleop_node.cpp.o[0m
+[10.022s] [ 75%] [32m[1mLinking CXX executable teleop_node[0m
+[10.497s] [ 75%] Built target teleop_node
+[14.495s] [100%] [32m[1mLinking CXX executable imu_listener[0m
+[15.086s] [100%] Built target imu_listener
+[15.104s] Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8
+[15.117s] Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz
+[15.128s] -- Install configuration: ""
+[15.129s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/setup.dsv
+[15.129s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models
+[15.129s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes
+[15.129s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.config
+[15.130s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.sdf
+[15.130s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy
+[15.130s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf.in
+[15.131s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.config
+[15.131s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf
+[15.131s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes
+[15.133s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_cw_prop.dae
+[15.135s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_ccw_prop.dae
+[15.136s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/bluerov2_heavy.dae
+[15.176s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/BlueROV2Heavy.md
+[15.177s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/configs.yaml
+[15.177s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping
+[15.178s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf.in
+[15.178s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.config
+[15.178s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf
+[15.179s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/BlueROV2Ping.md
+[15.180s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/configs.yaml
+[15.180s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2
+[15.181s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf.in
+[15.182s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.config
+[15.183s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf
+[15.184s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes
+[15.185s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/bluerov2.dae
+[15.203s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_cw_prop.dae
+[15.207s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_ccw_prop.dae
+[15.209s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/BlueROV2.md
+[15.210s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/configs.yaml
+[15.211s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap
+[15.212s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.config
+[15.212s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.sdf
+[15.213s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes
+[15.213s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/sandseabed.dae
+[15.219s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/heightmap.dae
+[15.223s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/License and source for textures.txt
+[15.224s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/soil_sand_0045_01.jpg
+[15.232s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials
+[15.233s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/flat_normal.png
+[15.233s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/soil_sand_0045_01.jpg
+[15.239s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds
+[15.239s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_ping.world
+[15.240s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_underwater.world
+[15.240s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_heavy_underwater.world
+[15.242s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/package_run_dependencies/bluerov2_gz
+[15.242s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/parent_prefix_path/bluerov2_gz
+[15.242s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.sh
+[15.243s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.dsv
+[15.243s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.sh
+[15.243s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.dsv
+[15.244s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.bash
+[15.244s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.sh
+[15.245s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.zsh
+[15.245s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.dsv
+[15.246s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.dsv
+[15.246s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/packages/bluerov2_gz
+[15.247s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig.cmake
+[15.247s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig-version.cmake
+[15.249s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.xml
+[15.251s] -- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/teleop_node
+[15.254s] -- Set non-toolchain portion of runtime path of "/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/teleop_node" to ""
+[15.257s] Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz

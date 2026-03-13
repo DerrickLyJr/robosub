@@ -1,0 +1,3 @@
+source;share/bluerov2_gz/environment/ament_prefix_path.sh
+source;share/bluerov2_gz/environment/path.sh
+source;share/bluerov2_gz/environment/setup.dsv

@@ -1,0 +1,65 @@
+[0.057s] Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8
+[0.228s] [ 25%] [32mBuilding CXX object CMakeFiles/teleop_node.dir/scripts/teleop_node.cpp.o[0m
+[21.945s] [ 50%] [32m[1mLinking CXX executable teleop_node[0m
+[23.058s] [ 50%] Built target teleop_node
+[23.151s] [100%] Built target imu_listener
+[23.187s] Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8
+[23.224s] Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz
+[23.247s] -- Install configuration: ""
+[23.250s] -- Execute custom install script
+[23.255s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/setup.dsv
+[23.255s] -- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/launch/bluerov_stack.launch.py
+[23.277s] -- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/config/bridge_config.yaml
+[23.302s] -- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/depth_calculator.py
+[23.334s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/teleop_node
+[23.339s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/imu_listener
+[23.340s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.config
+[23.340s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.sdf
+[23.340s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/BlueROV2.md
+[23.340s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/configs.yaml
+[23.341s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/bluerov2.dae
+[23.341s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_ccw_prop.dae
+[23.341s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_cw_prop.dae
+[23.343s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.config
+[23.346s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf
+[23.346s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf.in
+[23.346s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/BlueROV2Heavy.md
+[23.346s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/configs.yaml
+[23.346s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/bluerov2_heavy.dae
+[23.346s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_ccw_prop.dae
+[23.346s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_cw_prop.dae
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.config
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf.in
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/BlueROV2Ping.md
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/configs.yaml
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.config
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf.in
+[23.347s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/flat_normal.png
+[23.348s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/soil_sand_0045_01.jpg
+[23.348s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/License and source for textures.txt
+[23.348s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/heightmap.dae
+[23.348s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/sandseabed.dae
+[23.348s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/soil_sand_0045_01.jpg
+[23.348s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.config
+[23.348s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.sdf
+[23.354s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_heavy_underwater.world
+[23.355s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_ping.world
+[23.355s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_underwater.world
+[23.355s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/package_run_dependencies/bluerov2_gz
+[23.355s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/parent_prefix_path/bluerov2_gz
+[23.356s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.sh
+[23.357s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.dsv
+[23.357s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.sh
+[23.357s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.dsv
+[23.358s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.bash
+[23.358s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.sh
+[23.360s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.zsh
+[23.360s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.dsv
+[23.361s] -- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.dsv
+[23.412s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/packages/bluerov2_gz
+[23.412s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig.cmake
+[23.412s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig-version.cmake
+[23.413s] -- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.xml
+[23.417s] Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz

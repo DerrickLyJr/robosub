@@ -34,3 +34,18 @@ thrusters:
   - x: 0.0 # Thruster 6
     y: 0.109
     z: 0.077
+
+# Control Constants
+servo_min: -1.0
+servo_max: 1.0
+control_offset: 0.0
+ccw_control_multiplier: -1.0
+cw_control_multiplier: 1.0
+
+# Topic Mappings
+thruster1_topic: "/model/bluerov2/joint/thruster1_joint/cmd_thrust"
+thruster2_topic: "/model/bluerov2/joint/thruster2_joint/cmd_thrust"
+thruster3_topic: "/model/bluerov2/joint/thruster3_joint/cmd_thrust"
+thruster4_topic: "/model/bluerov2/joint/thruster4_topic/cmd_thrust"
+thruster5_topic: "/model/bluerov2/joint/thruster5_joint/cmd_thrust"
+thruster6_topic: "/model/bluerov2/joint/thruster6_joint/cmd_thrust"

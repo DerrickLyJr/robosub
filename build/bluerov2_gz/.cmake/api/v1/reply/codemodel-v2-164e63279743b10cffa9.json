@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-2a6ce35db0b6ba6ec43b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "bluerov2_gz",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "bluerov2_gz_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bluerov2_gz_uninstall-1bbf6f63ef390428e2c4.json",
+					"name" : "bluerov2_gz_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "imu_listener::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-imu_listener-c763c39bf99e055a6505.json",
+					"name" : "imu_listener",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "teleop_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-teleop_node-aae3e74e57ff26facd3e.json",
+					"name" : "teleop_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-51e61981992dacf7a816.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz",
+		"source" : "/home/dlyerly/ros2_ws/src/bluerov2_gz"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

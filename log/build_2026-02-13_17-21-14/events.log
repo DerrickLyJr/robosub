@@ -1,0 +1,303 @@
+[0.000000] (-) TimerEvent: {}
+[0.000447] (bluerov2_gz) JobQueued: {'identifier': 'bluerov2_gz', 'dependencies': OrderedDict()}
+[0.001547] (bluerov2_gz) JobStarted: {'identifier': 'bluerov2_gz'}
+[0.027441] (bluerov2_gz) JobProgress: {'identifier': 'bluerov2_gz', 'progress': 'cmake'}
+[0.036409] (bluerov2_gz) JobProgress: {'identifier': 'bluerov2_gz', 'progress': 'build'}
+[0.036769] (bluerov2_gz) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz', '--', '-j8', '-l8'], 'cwd': '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/dlyerly/ros2_ws/install/bluerov2_gz/share/bluerov2_gz/models:/home/dlyerly/ros2_ws/install/bluerov2_gz/share/bluerov2_gz/worlds:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds:/opt/ros/jazzy/share:/mnt/c/Users/dlyer/ML_Projects:/mnt/c/Users/dlyer/ML_Projects', 'USER': 'dlyerly', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_NAMESPACE': 'hornet_robotics_robosub', 'GIT_ASKPASS': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dlyerly', 'TERM_PROGRAM_VERSION': '1.109.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-a27b9042-f541-4e00-bd98-17c654a1ac34.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dlyerly/ros2_ws/src/bluerov2_gz/install:/home/dlyerly/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dlyerly', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/3479_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/dlyerly/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/dlyerly/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/dlyer/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/dlyer/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/dlyer/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Java/jdk-20/bin:/mnt/c/Users/dlyer/PyCharm Community Edition 2023.3.5/bin:/mnt/c/Users/dlyer/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/dlyer/AppData/Roaming/npm:/mnt/c/Users/dlyer/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Graphviz/bin:/snap/bin:/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-503fee0c14c1ae09.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/dlyerly/.vscode-server/data/User/workspaceStorage/249751ceb9f4b8d6a524ee72416c02ae-1/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-100da306a4.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/dlyerly/ros2_ws/install/bluerov2_gz:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/dlyerly/ros2_ws/install/bluerov2_gz:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[0.099564] (-) TimerEvent: {}
+[0.200074] (-) TimerEvent: {}
+[0.229036] (bluerov2_gz) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/teleop_node.dir/scripts/teleop_node.cpp.o\x1b[0m\n'}
+[0.303522] (-) TimerEvent: {}
+[0.407410] (-) TimerEvent: {}
+[0.507923] (-) TimerEvent: {}
+[0.612500] (-) TimerEvent: {}
+[0.713577] (-) TimerEvent: {}
+[0.814650] (-) TimerEvent: {}
+[0.915275] (-) TimerEvent: {}
+[1.019556] (-) TimerEvent: {}
+[1.120311] (-) TimerEvent: {}
+[1.220757] (-) TimerEvent: {}
+[1.321451] (-) TimerEvent: {}
+[1.422263] (-) TimerEvent: {}
+[1.522717] (-) TimerEvent: {}
+[1.623214] (-) TimerEvent: {}
+[1.724684] (-) TimerEvent: {}
+[1.825855] (-) TimerEvent: {}
+[1.926334] (-) TimerEvent: {}
+[2.026799] (-) TimerEvent: {}
+[2.127391] (-) TimerEvent: {}
+[2.235406] (-) TimerEvent: {}
+[2.335851] (-) TimerEvent: {}
+[2.436340] (-) TimerEvent: {}
+[2.536823] (-) TimerEvent: {}
+[2.637443] (-) TimerEvent: {}
+[2.755973] (-) TimerEvent: {}
+[2.857907] (-) TimerEvent: {}
+[2.960470] (-) TimerEvent: {}
+[3.067418] (-) TimerEvent: {}
+[3.168001] (-) TimerEvent: {}
+[3.268796] (-) TimerEvent: {}
+[3.369443] (-) TimerEvent: {}
+[3.470013] (-) TimerEvent: {}
+[3.570558] (-) TimerEvent: {}
+[3.671548] (-) TimerEvent: {}
+[3.780896] (-) TimerEvent: {}
+[3.881805] (-) TimerEvent: {}
+[3.983293] (-) TimerEvent: {}
+[4.088097] (-) TimerEvent: {}
+[4.195719] (-) TimerEvent: {}
+[4.297743] (-) TimerEvent: {}
+[4.398263] (-) TimerEvent: {}
+[4.498899] (-) TimerEvent: {}
+[4.599452] (-) TimerEvent: {}
+[4.700168] (-) TimerEvent: {}
+[4.801657] (-) TimerEvent: {}
+[4.907528] (-) TimerEvent: {}
+[5.008220] (-) TimerEvent: {}
+[5.117622] (-) TimerEvent: {}
+[5.218538] (-) TimerEvent: {}
+[5.319588] (-) TimerEvent: {}
+[5.425688] (-) TimerEvent: {}
+[5.526162] (-) TimerEvent: {}
+[5.627047] (-) TimerEvent: {}
+[5.728150] (-) TimerEvent: {}
+[5.828785] (-) TimerEvent: {}
+[5.929277] (-) TimerEvent: {}
+[6.030433] (-) TimerEvent: {}
+[6.138936] (-) TimerEvent: {}
+[6.243914] (-) TimerEvent: {}
+[6.349668] (-) TimerEvent: {}
+[6.450150] (-) TimerEvent: {}
+[6.555439] (-) TimerEvent: {}
+[6.656061] (-) TimerEvent: {}
+[6.763430] (-) TimerEvent: {}
+[6.864034] (-) TimerEvent: {}
+[6.968115] (-) TimerEvent: {}
+[7.068572] (-) TimerEvent: {}
+[7.169226] (-) TimerEvent: {}
+[7.269916] (-) TimerEvent: {}
+[7.371172] (-) TimerEvent: {}
+[7.474884] (-) TimerEvent: {}
+[7.576306] (-) TimerEvent: {}
+[7.677245] (-) TimerEvent: {}
+[7.778132] (-) TimerEvent: {}
+[7.878730] (-) TimerEvent: {}
+[7.979251] (-) TimerEvent: {}
+[8.079929] (-) TimerEvent: {}
+[8.180576] (-) TimerEvent: {}
+[8.283410] (-) TimerEvent: {}
+[8.383841] (-) TimerEvent: {}
+[8.484321] (-) TimerEvent: {}
+[8.584793] (-) TimerEvent: {}
+[8.685814] (-) TimerEvent: {}
+[8.790887] (-) TimerEvent: {}
+[8.893652] (-) TimerEvent: {}
+[8.994306] (-) TimerEvent: {}
+[9.095709] (-) TimerEvent: {}
+[9.196202] (-) TimerEvent: {}
+[9.296701] (-) TimerEvent: {}
+[9.397235] (-) TimerEvent: {}
+[9.497795] (-) TimerEvent: {}
+[9.598700] (-) TimerEvent: {}
+[9.699270] (-) TimerEvent: {}
+[9.799947] (-) TimerEvent: {}
+[9.901236] (-) TimerEvent: {}
+[10.001726] (-) TimerEvent: {}
+[10.103064] (-) TimerEvent: {}
+[10.204513] (-) TimerEvent: {}
+[10.305296] (-) TimerEvent: {}
+[10.411410] (-) TimerEvent: {}
+[10.512249] (-) TimerEvent: {}
+[10.612659] (-) TimerEvent: {}
+[10.713169] (-) TimerEvent: {}
+[10.814375] (-) TimerEvent: {}
+[10.916183] (-) TimerEvent: {}
+[11.016660] (-) TimerEvent: {}
+[11.117170] (-) TimerEvent: {}
+[11.217715] (-) TimerEvent: {}
+[11.328122] (-) TimerEvent: {}
+[11.428697] (-) TimerEvent: {}
+[11.529234] (-) TimerEvent: {}
+[11.631413] (-) TimerEvent: {}
+[11.731914] (-) TimerEvent: {}
+[11.833451] (-) TimerEvent: {}
+[11.934005] (-) TimerEvent: {}
+[12.034512] (-) TimerEvent: {}
+[12.135054] (-) TimerEvent: {}
+[12.237034] (-) TimerEvent: {}
+[12.337700] (-) TimerEvent: {}
+[12.439423] (-) TimerEvent: {}
+[12.541013] (-) TimerEvent: {}
+[12.643661] (-) TimerEvent: {}
+[12.751440] (-) TimerEvent: {}
+[12.852211] (-) TimerEvent: {}
+[12.952835] (-) TimerEvent: {}
+[13.053332] (-) TimerEvent: {}
+[13.156059] (-) TimerEvent: {}
+[13.257533] (-) TimerEvent: {}
+[13.359239] (-) TimerEvent: {}
+[13.461070] (-) TimerEvent: {}
+[13.562034] (-) TimerEvent: {}
+[13.663600] (-) TimerEvent: {}
+[13.764971] (-) TimerEvent: {}
+[13.866273] (-) TimerEvent: {}
+[13.966767] (-) TimerEvent: {}
+[14.067313] (-) TimerEvent: {}
+[14.167805] (-) TimerEvent: {}
+[14.268278] (-) TimerEvent: {}
+[14.369055] (-) TimerEvent: {}
+[14.474093] (-) TimerEvent: {}
+[14.579445] (-) TimerEvent: {}
+[14.679916] (-) TimerEvent: {}
+[14.780394] (-) TimerEvent: {}
+[14.881029] (-) TimerEvent: {}
+[14.982468] (-) TimerEvent: {}
+[15.088170] (-) TimerEvent: {}
+[15.188615] (-) TimerEvent: {}
+[15.295456] (-) TimerEvent: {}
+[15.396453] (-) TimerEvent: {}
+[15.497021] (-) TimerEvent: {}
+[15.597596] (-) TimerEvent: {}
+[15.698277] (-) TimerEvent: {}
+[15.798802] (-) TimerEvent: {}
+[15.899467] (-) TimerEvent: {}
+[15.999982] (-) TimerEvent: {}
+[16.100460] (-) TimerEvent: {}
+[16.203465] (-) TimerEvent: {}
+[16.303907] (-) TimerEvent: {}
+[16.404969] (-) TimerEvent: {}
+[16.507593] (-) TimerEvent: {}
+[16.608167] (-) TimerEvent: {}
+[16.711553] (-) TimerEvent: {}
+[16.812514] (-) TimerEvent: {}
+[16.913151] (-) TimerEvent: {}
+[17.013740] (-) TimerEvent: {}
+[17.115418] (-) TimerEvent: {}
+[17.215980] (-) TimerEvent: {}
+[17.316591] (-) TimerEvent: {}
+[17.419414] (-) TimerEvent: {}
+[17.519872] (-) TimerEvent: {}
+[17.620478] (-) TimerEvent: {}
+[17.721077] (-) TimerEvent: {}
+[17.821778] (-) TimerEvent: {}
+[17.922276] (-) TimerEvent: {}
+[18.023723] (-) TimerEvent: {}
+[18.127223] (-) TimerEvent: {}
+[18.227957] (-) TimerEvent: {}
+[18.328400] (-) TimerEvent: {}
+[18.429257] (-) TimerEvent: {}
+[18.535695] (-) TimerEvent: {}
+[18.636493] (-) TimerEvent: {}
+[18.737069] (-) TimerEvent: {}
+[18.837587] (-) TimerEvent: {}
+[18.938097] (-) TimerEvent: {}
+[19.041130] (-) TimerEvent: {}
+[19.141712] (-) TimerEvent: {}
+[19.243100] (-) TimerEvent: {}
+[19.345468] (-) TimerEvent: {}
+[19.451826] (-) TimerEvent: {}
+[19.552449] (-) TimerEvent: {}
+[19.652927] (-) TimerEvent: {}
+[19.753476] (-) TimerEvent: {}
+[19.853935] (-) TimerEvent: {}
+[19.954494] (-) TimerEvent: {}
+[20.056265] (-) TimerEvent: {}
+[20.157207] (-) TimerEvent: {}
+[20.257890] (-) TimerEvent: {}
+[20.358691] (-) TimerEvent: {}
+[20.459261] (-) TimerEvent: {}
+[20.563500] (-) TimerEvent: {}
+[20.667518] (-) TimerEvent: {}
+[20.768803] (-) TimerEvent: {}
+[20.869282] (-) TimerEvent: {}
+[20.971182] (-) TimerEvent: {}
+[21.072473] (-) TimerEvent: {}
+[21.173317] (-) TimerEvent: {}
+[21.275418] (-) TimerEvent: {}
+[21.375884] (-) TimerEvent: {}
+[21.479419] (-) TimerEvent: {}
+[21.583506] (-) TimerEvent: {}
+[21.687412] (-) TimerEvent: {}
+[21.791394] (-) TimerEvent: {}
+[21.892093] (-) TimerEvent: {}
+[21.946214] (bluerov2_gz) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable teleop_node\x1b[0m\n'}
+[21.992498] (-) TimerEvent: {}
+[22.093004] (-) TimerEvent: {}
+[22.193766] (-) TimerEvent: {}
+[22.294325] (-) TimerEvent: {}
+[22.396397] (-) TimerEvent: {}
+[22.500815] (-) TimerEvent: {}
+[22.601402] (-) TimerEvent: {}
+[22.703409] (-) TimerEvent: {}
+[22.804059] (-) TimerEvent: {}
+[22.905627] (-) TimerEvent: {}
+[23.006229] (-) TimerEvent: {}
+[23.059032] (bluerov2_gz) StdoutLine: {'line': b'[ 50%] Built target teleop_node\n'}
+[23.107424] (-) TimerEvent: {}
+[23.152762] (bluerov2_gz) StdoutLine: {'line': b'[100%] Built target imu_listener\n'}
+[23.187928] (bluerov2_gz) CommandEnded: {'returncode': 0}
+[23.189292] (bluerov2_gz) JobProgress: {'identifier': 'bluerov2_gz', 'progress': 'install'}
+[23.208381] (-) TimerEvent: {}
+[23.225163] (bluerov2_gz) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz'], 'cwd': '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/dlyerly/ros2_ws/install/bluerov2_gz/share/bluerov2_gz/models:/home/dlyerly/ros2_ws/install/bluerov2_gz/share/bluerov2_gz/worlds:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds:/opt/ros/jazzy/share:/mnt/c/Users/dlyer/ML_Projects:/mnt/c/Users/dlyer/ML_Projects', 'USER': 'dlyerly', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_NAMESPACE': 'hornet_robotics_robosub', 'GIT_ASKPASS': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dlyerly', 'TERM_PROGRAM_VERSION': '1.109.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-a27b9042-f541-4e00-bd98-17c654a1ac34.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dlyerly/ros2_ws/src/bluerov2_gz/install:/home/dlyerly/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dlyerly', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/3479_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/dlyerly/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/dlyerly/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/dlyer/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/dlyer/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/dlyer/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Java/jdk-20/bin:/mnt/c/Users/dlyer/PyCharm Community Edition 2023.3.5/bin:/mnt/c/Users/dlyer/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/dlyer/AppData/Roaming/npm:/mnt/c/Users/dlyer/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Graphviz/bin:/snap/bin:/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-503fee0c14c1ae09.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/dlyerly/.vscode-server/data/User/workspaceStorage/249751ceb9f4b8d6a524ee72416c02ae-1/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-100da306a4.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/dlyerly/ros2_ws/install/bluerov2_gz:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/dlyerly/ros2_ws/install/bluerov2_gz:/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[23.248283] (bluerov2_gz) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.251073] (bluerov2_gz) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[23.256410] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/setup.dsv\n'}
+[23.256953] (bluerov2_gz) StdoutLine: {'line': b'-- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/launch/bluerov_stack.launch.py\n'}
+[23.278724] (bluerov2_gz) StdoutLine: {'line': b'-- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/config/bridge_config.yaml\n'}
+[23.303563] (bluerov2_gz) StdoutLine: {'line': b'-- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/depth_calculator.py\n'}
+[23.308859] (-) TimerEvent: {}
+[23.335537] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/teleop_node\n'}
+[23.339784] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/imu_listener\n'}
+[23.340195] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.config\n'}
+[23.341222] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.sdf\n'}
+[23.341513] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/BlueROV2.md\n'}
+[23.341803] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/configs.yaml\n'}
+[23.341924] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/bluerov2.dae\n'}
+[23.342328] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_ccw_prop.dae\n'}
+[23.342521] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_cw_prop.dae\n'}
+[23.343064] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.config\n'}
+[23.344272] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf\n'}
+[23.347202] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf.in\n'}
+[23.347381] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/BlueROV2Heavy.md\n'}
+[23.347556] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/configs.yaml\n'}
+[23.347678] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/bluerov2_heavy.dae\n'}
+[23.347799] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_ccw_prop.dae\n'}
+[23.347905] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_cw_prop.dae\n'}
+[23.348014] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.config\n'}
+[23.348166] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf\n'}
+[23.348292] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf.in\n'}
+[23.348406] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/BlueROV2Ping.md\n'}
+[23.348514] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/configs.yaml\n'}
+[23.348618] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.config\n'}
+[23.348739] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf\n'}
+[23.348858] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf.in\n'}
+[23.348973] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/flat_normal.png\n'}
+[23.349109] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/soil_sand_0045_01.jpg\n'}
+[23.349223] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/License and source for textures.txt\n'}
+[23.349412] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/heightmap.dae\n'}
+[23.349527] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/sandseabed.dae\n'}
+[23.349656] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/soil_sand_0045_01.jpg\n'}
+[23.349777] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.config\n'}
+[23.349895] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.sdf\n'}
+[23.355604] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_heavy_underwater.world\n'}
+[23.355853] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_ping.world\n'}
+[23.356415] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_underwater.world\n'}
+[23.356625] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/package_run_dependencies/bluerov2_gz\n'}
+[23.356845] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/parent_prefix_path/bluerov2_gz\n'}
+[23.357023] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.sh\n'}
+[23.357976] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.dsv\n'}
+[23.358307] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.sh\n'}
+[23.358603] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.dsv\n'}
+[23.359009] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.bash\n'}
+[23.359122] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.sh\n'}
+[23.359229] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.zsh\n'}
+[23.361673] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.dsv\n'}
+[23.362010] (bluerov2_gz) StdoutLine: {'line': b'-- Symlinking: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.dsv\n'}
+[23.408963] (-) TimerEvent: {}
+[23.412240] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/packages/bluerov2_gz\n'}
+[23.413677] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig.cmake\n'}
+[23.413824] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig-version.cmake\n'}
+[23.414042] (bluerov2_gz) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.xml\n'}
+[23.416728] (bluerov2_gz) CommandEnded: {'returncode': 0}
+[23.461404] (bluerov2_gz) JobEnded: {'identifier': 'bluerov2_gz', 'rc': 0}
+[23.465767] (-) EventReactorShutdown: {}

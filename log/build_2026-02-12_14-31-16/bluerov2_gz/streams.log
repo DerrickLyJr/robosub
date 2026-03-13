@@ -1,0 +1,44 @@
+[0.032s] Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/dlyerly/ros2_ws/src/bluerov2_gz -DCMAKE_INSTALL_PREFIX=/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz
+[0.449s] -- The C compiler identification is GNU 13.3.0
+[1.814s] -- The CXX compiler identification is GNU 13.3.0
+[3.266s] -- Detecting C compiler ABI info
+[3.836s] -- Detecting C compiler ABI info - done
+[3.845s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.847s] -- Detecting C compile features
+[3.849s] -- Detecting C compile features - done
+[4.043s] -- Detecting CXX compiler ABI info
+[4.506s] -- Detecting CXX compiler ABI info - done
+[4.515s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.515s] -- Detecting CXX compile features
+[4.516s] -- Detecting CXX compile features - done
+[4.570s] -- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)
+[4.823s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.144s] -- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)
+[5.522s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.558s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[5.593s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.628s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.783s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[5.792s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[5.932s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[6.499s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[6.916s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.327s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[7.361s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[7.436s] -- Configuring done (7.4s)
+[7.443s] [31mCMake Error at CMakeLists.txt:22 (add_executable):
+[7.443s]   Cannot find source file:
+[7.443s] 
+[7.443s]     src/imu_listener.cpp
+[7.443s] 
+[7.443s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[7.443s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[7.443s]   .f95 .f03 .hip .ispc
+[7.443s] 
+[7.443s] [0m
+[7.445s] [31mCMake Error at CMakeLists.txt:22 (add_executable):
+[7.445s]   No SOURCES given to target: imu_listener
+[7.445s] 
+[7.445s] [0m
+[7.445s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[7.458s] Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/dlyerly/ros2_ws/src/bluerov2_gz -DCMAKE_INSTALL_PREFIX=/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz

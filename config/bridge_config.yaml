@@ -1,0 +1,83 @@
+- ros_topic_name: "/model/bluerov2/joint/thruster1_joint/cmd_thrust"
+  gz_topic_name: "/model/bluerov2/joint/thruster1_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+  
+
+- ros_topic_name: "/model/bluerov2/joint/thruster2_joint/cmd_thrust"
+  gz_topic_name: "/model/bluerov2/joint/thruster2_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+  
+
+- ros_topic_name: "/model/bluerov2/joint/thruster3_joint/cmd_thrust"
+  gz_topic_name: "/model/bluerov2/joint/thruster3_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+  ros_qos_reliability: "best_effort"
+
+- ros_topic_name: "/model/bluerov2/joint/thruster4_joint/cmd_thrust"
+  gz_topic_name: "/model/bluerov2/joint/thruster4_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+  
+
+- ros_topic_name: "/model/bluerov2/joint/thruster5_joint/cmd_thrust"
+  gz_topic_name: "/model/bluerov2/joint/thruster5_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ 
+  
+
+- ros_topic_name: "/model/bluerov2/joint/thruster6_joint/cmd_thrust"
+  gz_topic_name: "/model/bluerov2/joint/thruster6_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+  
+
+- ros_topic_name: "/model/bluerov2/sensor/imu_sensor/imu"
+  gz_topic_name: "/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/imu_sensor/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
+  ros_qos_reliability: "best_effort"
+
+- ros_topic_name: "/model/bluerov2/pressure"
+  gz_topic_name: "/model/bluerov2/pressure"
+  ros_type_name: "sensor_msgs/msg/FluidPressure"
+  gz_type_name: "gz.msgs.FluidPressure"
+  direction: GZ_TO_ROS
+  ros_qos_reliability: "best_effort"
+
+# Left Camera
+- ros_topic_name: "/camera/left/image_raw"
+  gz_topic_name: "/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/left_camera/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+  ros_qos_reliability: "best_effort"
+
+- ros_topic_name: "/camera/left/camera_info"
+  gz_topic_name: "/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/left_camera/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  direction: GZ_TO_ROS
+
+# Right Camera
+- ros_topic_name: "/camera/right/image_raw"
+  gz_topic_name: "/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/right_camera/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+  ros_qos_reliability: "best_effort"
+
+- ros_topic_name: "/camera/right/camera_info"
+  gz_topic_name: "/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/right_camera/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  direction: GZ_TO_ROS

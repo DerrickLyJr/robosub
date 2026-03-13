@@ -1,0 +1,84 @@
+-- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)
+-- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Configuring done (1.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz
+[ 25%] [32mBuilding CXX object CMakeFiles/imu_listener.dir/scripts/imu_listener.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/teleop_node.dir/scripts/teleop_node.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable teleop_node[0m
+[ 75%] Built target teleop_node
+[100%] [32m[1mLinking CXX executable imu_listener[0m
+[100%] Built target imu_listener
+-- Install configuration: ""
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/setup.dsv
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.config
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/axes/model.sdf
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf.in
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.config
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/model.sdf
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_cw_prop.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/t200_ccw_prop.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/meshes/bluerov2_heavy.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/BlueROV2Heavy.md
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_heavy/configs.yaml
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf.in
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.config
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/model.sdf
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/BlueROV2Ping.md
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2_ping/configs.yaml
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf.in
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.config
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/model.sdf
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/bluerov2.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_cw_prop.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/meshes/t200_ccw_prop.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/BlueROV2.md
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/bluerov2/configs.yaml
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.config
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/model.sdf
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/sandseabed.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/heightmap.dae
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/License and source for textures.txt
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/meshes/soil_sand_0045_01.jpg
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/flat_normal.png
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/models/sand_heightmap/materials/soil_sand_0045_01.jpg
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_ping.world
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_underwater.world
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/worlds/bluerov2_heavy_underwater.world
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/package_run_dependencies/bluerov2_gz
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/parent_prefix_path/bluerov2_gz
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.sh
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/ament_prefix_path.dsv
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.sh
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/environment/path.dsv
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.bash
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.sh
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.zsh
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/local_setup.dsv
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.dsv
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/ament_index/resource_index/packages/bluerov2_gz
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig.cmake
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/cmake/bluerov2_gzConfig-version.cmake
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/share/bluerov2_gz/package.xml
+-- Installing: /home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/teleop_node
+-- Set non-toolchain portion of runtime path of "/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz/lib/bluerov2_gz/teleop_node" to ""

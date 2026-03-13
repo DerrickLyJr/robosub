@@ -1,0 +1,124 @@
+[0.000000] (-) TimerEvent: {}
+[0.000277] (bluerov2_gz) JobQueued: {'identifier': 'bluerov2_gz', 'dependencies': OrderedDict()}
+[0.000340] (bluerov2_gz) JobStarted: {'identifier': 'bluerov2_gz'}
+[0.022683] (bluerov2_gz) JobProgress: {'identifier': 'bluerov2_gz', 'progress': 'cmake'}
+[0.026850] (bluerov2_gz) Command: {'cmd': ['/usr/bin/cmake', '/home/dlyerly/ros2_ws/src/bluerov2_gz', '-DCMAKE_INSTALL_PREFIX=/home/dlyerly/ros2_ws/src/bluerov2_gz/install/bluerov2_gz'], 'cwd': '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/mnt/c/Users/dlyer/ML_Projects:/mnt/c/Users/dlyer/ML_Projects', 'USER': 'dlyerly', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_NAMESPACE': 'hornet_robotics_robosub', 'GIT_ASKPASS': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dlyerly', 'TERM_PROGRAM_VERSION': '1.109.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-042237e7-3c8b-4052-8f10-92e55dcb6aeb.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dlyerly', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/3479_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/dlyerly/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/dlyerly/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/dlyerly/.vscode-server/bin/6534f6ba7604bf324f94cc9a590727f39a4af040/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/dlyer/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/dlyer/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/dlyer/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/dlyer/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Java/jdk-20/bin:/mnt/c/Users/dlyer/PyCharm Community Edition 2023.3.5/bin:/mnt/c/Users/dlyer/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/dlyer/AppData/Roaming/npm:/mnt/c/Users/dlyer/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Graphviz/bin:/snap/bin:/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/dlyerly/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-503fee0c14c1ae09.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/dlyerly/.vscode-server/data/User/workspaceStorage/249751ceb9f4b8d6a524ee72416c02ae-1/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-100da306a4.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[0.098929] (-) TimerEvent: {}
+[0.199394] (-) TimerEvent: {}
+[0.300005] (-) TimerEvent: {}
+[0.400500] (-) TimerEvent: {}
+[0.448719] (bluerov2_gz) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.500724] (-) TimerEvent: {}
+[0.601178] (-) TimerEvent: {}
+[0.701688] (-) TimerEvent: {}
+[0.802079] (-) TimerEvent: {}
+[0.902480] (-) TimerEvent: {}
+[1.002910] (-) TimerEvent: {}
+[1.103402] (-) TimerEvent: {}
+[1.203909] (-) TimerEvent: {}
+[1.304311] (-) TimerEvent: {}
+[1.404702] (-) TimerEvent: {}
+[1.505240] (-) TimerEvent: {}
+[1.605665] (-) TimerEvent: {}
+[1.706111] (-) TimerEvent: {}
+[1.806570] (-) TimerEvent: {}
+[1.814471] (bluerov2_gz) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.906784] (-) TimerEvent: {}
+[2.007291] (-) TimerEvent: {}
+[2.107745] (-) TimerEvent: {}
+[2.208178] (-) TimerEvent: {}
+[2.308717] (-) TimerEvent: {}
+[2.409218] (-) TimerEvent: {}
+[2.509719] (-) TimerEvent: {}
+[2.610276] (-) TimerEvent: {}
+[2.710912] (-) TimerEvent: {}
+[2.811656] (-) TimerEvent: {}
+[2.912268] (-) TimerEvent: {}
+[3.012805] (-) TimerEvent: {}
+[3.113224] (-) TimerEvent: {}
+[3.213598] (-) TimerEvent: {}
+[3.265959] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.313738] (-) TimerEvent: {}
+[3.414102] (-) TimerEvent: {}
+[3.514481] (-) TimerEvent: {}
+[3.614878] (-) TimerEvent: {}
+[3.715278] (-) TimerEvent: {}
+[3.815808] (-) TimerEvent: {}
+[3.836536] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.845343] (bluerov2_gz) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[3.847612] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.848816] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.915972] (-) TimerEvent: {}
+[4.016307] (-) TimerEvent: {}
+[4.042872] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.116560] (-) TimerEvent: {}
+[4.217071] (-) TimerEvent: {}
+[4.317634] (-) TimerEvent: {}
+[4.418138] (-) TimerEvent: {}
+[4.506296] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.515081] (bluerov2_gz) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[4.515422] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.515905] (bluerov2_gz) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.518285] (-) TimerEvent: {}
+[4.569771] (bluerov2_gz) StdoutLine: {'line': b'-- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)\n'}
+[4.618516] (-) TimerEvent: {}
+[4.718932] (-) TimerEvent: {}
+[4.819363] (-) TimerEvent: {}
+[4.822677] (bluerov2_gz) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[4.919517] (-) TimerEvent: {}
+[5.019924] (-) TimerEvent: {}
+[5.120295] (-) TimerEvent: {}
+[5.144559] (bluerov2_gz) StdoutLine: {'line': b'-- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[5.220466] (-) TimerEvent: {}
+[5.320909] (-) TimerEvent: {}
+[5.421354] (-) TimerEvent: {}
+[5.521737] (-) TimerEvent: {}
+[5.522166] (bluerov2_gz) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[5.557717] (bluerov2_gz) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[5.592759] (bluerov2_gz) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.621963] (-) TimerEvent: {}
+[5.628405] (bluerov2_gz) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.722205] (-) TimerEvent: {}
+[5.783373] (bluerov2_gz) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[5.791975] (bluerov2_gz) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.822376] (-) TimerEvent: {}
+[5.922848] (-) TimerEvent: {}
+[5.932015] (bluerov2_gz) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[6.022971] (-) TimerEvent: {}
+[6.123411] (-) TimerEvent: {}
+[6.223874] (-) TimerEvent: {}
+[6.324347] (-) TimerEvent: {}
+[6.424941] (-) TimerEvent: {}
+[6.499374] (bluerov2_gz) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[6.525222] (-) TimerEvent: {}
+[6.625717] (-) TimerEvent: {}
+[6.726319] (-) TimerEvent: {}
+[6.826852] (-) TimerEvent: {}
+[6.915976] (bluerov2_gz) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[6.927360] (-) TimerEvent: {}
+[7.027991] (-) TimerEvent: {}
+[7.128411] (-) TimerEvent: {}
+[7.228813] (-) TimerEvent: {}
+[7.327283] (bluerov2_gz) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[7.328922] (-) TimerEvent: {}
+[7.361442] (bluerov2_gz) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[7.429098] (-) TimerEvent: {}
+[7.435944] (bluerov2_gz) StdoutLine: {'line': b'-- Configuring done (7.4s)\n'}
+[7.442709] (bluerov2_gz) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:22 (add_executable):\n'}
+[7.442928] (bluerov2_gz) StderrLine: {'line': b'  Cannot find source file:\n'}
+[7.442999] (bluerov2_gz) StderrLine: {'line': b'\n'}
+[7.443062] (bluerov2_gz) StderrLine: {'line': b'    src/imu_listener.cpp\n'}
+[7.443123] (bluerov2_gz) StderrLine: {'line': b'\n'}
+[7.443251] (bluerov2_gz) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[7.443318] (bluerov2_gz) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[7.443377] (bluerov2_gz) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[7.443436] (bluerov2_gz) StderrLine: {'line': b'\n'}
+[7.443495] (bluerov2_gz) StderrLine: {'line': b'\x1b[0m\n'}
+[7.444751] (bluerov2_gz) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:22 (add_executable):\n'}
+[7.444970] (bluerov2_gz) StderrLine: {'line': b'  No SOURCES given to target: imu_listener\n'}
+[7.445076] (bluerov2_gz) StderrLine: {'line': b'\n'}
+[7.445183] (bluerov2_gz) StderrLine: {'line': b'\x1b[0m\n'}
+[7.445281] (bluerov2_gz) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[7.457999] (bluerov2_gz) CommandEnded: {'returncode': 1}
+[7.490684] (bluerov2_gz) JobEnded: {'identifier': 'bluerov2_gz', 'rc': 1}
+[7.492352] (-) EventReactorShutdown: {}
