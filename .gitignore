@@ -4,3 +4,12 @@ cmake-build-debug/
 .vscode/
 .mypy_cache/
 venv/
+build/
+install/
+log/
+*.gv
+*.pdf
+**/log/**
+*.pyc
+scripts/flight_controller.py
+*.env

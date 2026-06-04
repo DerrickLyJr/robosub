@@ -1,1 +1,0 @@
-/home/dlyerly/ros2_ws/src/bluerov2_gz/scripts/depth_calculator.py

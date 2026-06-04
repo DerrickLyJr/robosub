@@ -60,7 +60,7 @@
       <sensor name="left_camera" type="camera">
         <pose>0.2 0.06 0.1 0 0 0</pose>
         <always_on>1</always_on>
-        <update_rate>30</update_rate>
+        <update_rate>5</update_rate>
         <visualize>true</visualize>
         <topic>/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/left_camera/image</topic>
         <camera>
@@ -80,7 +80,7 @@
       <sensor name="right_camera" type="camera">
         <pose>0.2 -0.06 0.1 0 0 0</pose>
         <always_on>1</always_on>
-        <update_rate>30</update_rate>
+        <update_rate>5</update_rate>
         <visualize>true</visualize>
         <topic>/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/right_camera/image</topic>
         <camera>
@@ -464,6 +464,21 @@
       </control>
 
     </plugin>
+
+    <plugin
+  filename="gz-sim-pose-publisher-system"
+  name="gz::sim::systems::PosePublisher">
+  <publish_link_pose>true</publish_link_pose>
+  <use_pose_vector_msg>true</use_pose_vector_msg>
+  <static_publisher>false</static_publisher>
+  <static_update_frequency>30</static_update_frequency>
+</plugin>
+
+  <plugin
+        filename="gz-sim-joint-state-publisher-system"
+        name="gz::sim::systems::JointStatePublisher">
+        <topic>/world/bluerov2_underwater/model/bluerov2/joint_state</topic>
+      </plugin>
 
   </model>
 </sdf>

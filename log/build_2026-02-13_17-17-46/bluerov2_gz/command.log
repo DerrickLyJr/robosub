@@ -1,2 +1,0 @@
-Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8
-Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8

@@ -20,8 +20,8 @@ class StereoVisionNode(Node):
         self.load_calibration()
 
         # Subscribers for the topics you found in Gazebo
-        self.left_sub = message_filters.Subscriber(self, Image, '/camera/left/image_raw')
-        self.right_sub = message_filters.Subscriber(self, Image, '/camera/right/image_raw')
+        self.left_sub = message_filters.Subscriber(self, Image, '/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/right_camera/image')
+        self.right_sub = message_filters.Subscriber(self, Image, '/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/left_camera/image')
         
         # Syncing the frames (Simulation needs a small 'slop' for timing)
         self.ts = message_filters.ApproximateTimeSynchronizer(
@@ -85,7 +85,7 @@ class StereoVisionNode(Node):
         # Output center distance to terminal
         cy, cx = depths.shape[0] // 2, depths.shape[1] // 2
         center_dist = depths[cy, cx]
-        self.get_logger().info(f"Target Distance: {center_dist:.2f}m", throttle_duration_sec=0.5)
+        #self.get_logger().info(f"Target Distance: {center_dist:.2f}m", throttle_duration_sec=0.5)
 
         # Visualize results
         disparity_vis = cv2.normalize(disparity, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)

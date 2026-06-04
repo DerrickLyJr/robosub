@@ -1,0 +1,31 @@
+ekf_filter_node:
+  ros__parameters:
+    use_sim_time: true
+    frequency: 30.0
+    sensor_timeout: 0.1
+    two_d_mode: false
+    publish_tf: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link_estimated
+    world_frame: odom
+
+    # FIXED DATA CHANNELS: Targeted right at your verified, active topic streams
+    imu0: /model/bluerov2/sensor/imu_sensor/imu
+    imu0_config: [false, false, false,
+                  true,  true,  true,   # Track orientation changes via gyroscopes
+                  false, false, false,
+                  false, false, false,   # Kept off to prevent NaN math loops
+                  true,  true,  true]   # Track linear acceleration physics
+    imu0_differential: false
+    imu0_relative: true
+    imu0_remove_gravitational_acceleration: false # Prevents Gazebo fluid physics division-by-zero crashes
+
+    pose0: /model/bluerov2/pose_depth
+    pose0_config: [false, false, true,
+                   false, false, false,
+                   false, false, false,
+                   false, false, false,
+                   false, false, false]
+    pose0_differential: true

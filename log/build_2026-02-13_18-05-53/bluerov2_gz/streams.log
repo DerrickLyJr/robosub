@@ -1,9 +1,0 @@
-[0.041s] Invoking command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8
-[0.216s] [ 50%] Built target imu_listener
-[0.217s] [ 75%] [32mBuilding CXX object CMakeFiles/teleop_node.dir/scripts/teleop_node.cpp.o[0m
-[4.011s] gmake[2]: *** [CMakeFiles/teleop_node.dir/build.make:76: CMakeFiles/teleop_node.dir/scripts/teleop_node.cpp.o] Interrupt
-[4.014s] gmake[1]: *** wait: No child processes.  Stop.
-[4.014s] gmake[1]: *** Waiting for unfinished jobs....
-[4.014s] gmake[1]: *** wait: No child processes.  Stop.
-[4.014s] gmake: *** [Makefile:146: all] Error 2
-[4.032s] Invoked command in '/home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/dlyerly/ros2_ws/src/bluerov2_gz/build/bluerov2_gz -- -j8 -l8

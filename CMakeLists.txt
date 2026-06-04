@@ -25,11 +25,15 @@ install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
 
-install(DIRECTORY scripts/computer_vision
-  DESTINATION lib/${PROJECT_NAME}
+install(DIRECTORY scripts/computer_vision/
+  DESTINATION lib/${PROJECT_NAME}/computer_vision
 )
 
 install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(DIRECTORY models worlds
   DESTINATION share/${PROJECT_NAME}
 )
 
@@ -37,6 +41,11 @@ install(DIRECTORY config
 install(PROGRAMS
   scripts/depth_calculator.py
   scripts/stereo_vision.py
+  scripts/ekf_9dof_localizer.py
+  scripts/localization_master.py
+  scripts/flight_controller.py
+  scripts/pressure_bridge.py
+  scripts/ground_truth_bridge.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -46,4 +55,4 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-ament_auto_package(INSTALL_TO_SHARE models worlds)
+ament_auto_package()

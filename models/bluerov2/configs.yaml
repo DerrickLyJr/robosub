@@ -6,32 +6,37 @@ bounding_box:
   x: 0.457
   y: 0.338
   z: 0.25
+
+# FIXED: Bring Mass and Volume centers to a unified vertical origin 
+# to eliminate the aggressive un-neutral buoyancy ceiling.
 center_of_mass:
   x: 0.0
   y: 0.0
-  z: 0.011
+  z: 0.0
 center_of_volume:
   x: 0.0
   y: 0.0
-  z: 0.06
-buoyancy_adjustment: 0.05
+  z: 0.0
+
+buoyancy_adjustment: 0.00  # Set to 0.00 for true neutral buoyancy tracking
+
 thrusters:
-  - x: 0.14 # Thruster 1
+  - x: 0.14
     y: -0.092
     z: 0.0
-  - x: 0.14 # Thruster 2
+  - x: 0.14
     y: 0.092
     z: 0.0
-  - x: -0.14 # Thruster 3
+  - x: -0.14
     y: -0.092
     z: 0.0
-  - x: -0.14 # Thruster 4
+  - x: -0.14
     y: 0.092
     z: 0.0
-  - x: 0.0 # Thruster 5
+  - x: 0.0
     y: -0.109
     z: 0.077
-  - x: 0.0 # Thruster 6
+  - x: 0.0
     y: 0.109
     z: 0.077
 
@@ -46,6 +51,7 @@ cw_control_multiplier: 1.0
 thruster1_topic: "/model/bluerov2/joint/thruster1_joint/cmd_thrust"
 thruster2_topic: "/model/bluerov2/joint/thruster2_joint/cmd_thrust"
 thruster3_topic: "/model/bluerov2/joint/thruster3_joint/cmd_thrust"
-thruster4_topic: "/model/bluerov2/joint/thruster4_topic/cmd_thrust"
+# FIXED: Patched subpath target to match '_joint' naming convention
+thruster4_topic: "/model/bluerov2/joint/thruster4_joint/cmd_thrust"
 thruster5_topic: "/model/bluerov2/joint/thruster5_joint/cmd_thrust"
 thruster6_topic: "/model/bluerov2/joint/thruster6_joint/cmd_thrust"

@@ -1,0 +1,29 @@
+ekf_filter_node:
+  ros__parameters:
+    use_sim_time: true
+    frequency: 30.0
+    sensor_timeout: 0.1
+    two_d_mode: false # We are underwater, we need 3D!
+    publish_tf: true
+    
+    map_frame: map              # The global world frame
+    odom_frame: odom            # The local starting frame
+    base_link_frame: base_link  # Your robot's center
+    world_frame: odom
+
+    # IMU config (Topic: /model/bluerov2/sensor/imu_sensor/imu)
+    imu0: /model/bluerov2/sensor/imu_sensor/imu
+    imu0_config: [false, false, false, # x, y, z positions
+                  true,  true,  true,  # roll, pitch, yaw angles
+                  false, false, false, # x, y, z velocities
+                  true,  true,  true,  # roll, pitch, yaw velocities
+                  true,  true,  true]  # x, y, z accelerations
+    imu0_differential: false
+    imu0_relative: true
+    qos_overrides:
+      /clock:
+        subscription:
+          reliability: reliable
+      /model/bluerov2/sensor/imu_sensor/imu:
+        subscription:
+          reliability: reliable
