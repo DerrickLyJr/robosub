@@ -16,6 +16,29 @@ class EKFLocalization(Node):
     def __init__(self):
         super().__init__('ekf_localization_node')
 
+        self.declare_parameter('topics.imu', '/model/bluerov2/conditioned_imu')
+        self.declare_parameter('topics.depth', '/model/bluerov2/virtual_depth')
+        self.declare_parameter('topics.odometry_out', '/odometry/filtered')
+        #self.declare_parameter('topics.depth', '/world/bluerov2_underwater/dynamic_pose/info')
+        
+        self.declare_parameter('process_noise.position_xy', 0.05)
+        self.declare_parameter('process_noise.position_z', 0.001)
+        self.declare_parameter('process_noise.velocity_xy', 0.15)
+        self.declare_parameter('process_noise.velocity_z', 0.01)
+        self.declare_parameter('process_noise.orientation_roll_pitch', 0.005)
+        self.declare_parameter('process_noise.orientation_yaw', 0.02)
+        
+        self.declare_parameter('sensor_noise.depth_variance', 0.04)
+        self.declare_parameter('environment.gravity', 9.800)
+        self.declare_parameter('environment.min_dt', 0.0001)
+
+        # Resolve Topic Bindings
+        self.imu_topic = self.get_parameter('topics.imu').value
+        self.depth_topic = self.get_parameter('topics.depth').value
+        self.odom_out_topic = self.get_parameter('topics.odometry_out').value
+        self.gravity = self.get_parameter('environment.gravity').value
+        self.min_dt = self.get_parameter('environment.min_dt').value
+
         self.print_counter = 0
         # 1. Single Source of Truth Vector (9x1 Column Matrix)
         # Tracking: [x, y, z, vx, vy, vz, roll, pitch, yaw]^T
@@ -38,17 +61,21 @@ class EKFLocalization(Node):
         # 3. The Process Noise Covariance Matrix (Q) for a FLAT sub
         self.Q = np.eye(9) * 0.01
 
-        # --- POSITION NOISE (0, 1, 2) ---
-        self.Q[0:2, 0:2] = 2.0    # X and Y: High uncertainty. The EKF must know it's drifting horizontally.
-        self.Q[2, 2]     = 0.001  # Z (Depth): Very low process noise. The sub stays flat/stable here.
+        self.Q[0, 0] = self.get_parameter('process_noise.position_xy').value # X and Y: High uncertainty. The EKF must know it's drifting horizontally.
+        self.Q[1, 1] = self.get_parameter('process_noise.position_xy').value
+        self.Q[2, 2] = self.get_parameter('process_noise.position_z').value
+        
+        self.Q[3, 3] = self.get_parameter('process_noise.velocity_xy').value
+        self.Q[4, 4] = self.get_parameter('process_noise.velocity_xy').value
+        self.Q[5, 5] = self.get_parameter('process_noise.velocity_z').value
+        
+        self.Q[6, 6] = self.get_parameter('process_noise.orientation_roll_pitch').value
+        self.Q[7, 7] = self.get_parameter('process_noise.orientation_roll_pitch').value
+        self.Q[8, 8] = self.get_parameter('process_noise.orientation_yaw').value
 
-        # --- VELOCITY NOISE (3, 4, 5) ---
-        self.Q[3:5, 3:5] = 1.5    # Vx and Vy: High uncertainty. Crucial because IMU drift is uncorrected here.
-        self.Q[5, 5]     = 0.01   # Vz: Low uncertainty. Trust the depth-to-vertical-velocity relationship.
 
-        # --- ORIENTATION NOISE (6, 7, 8) ---
-        self.Q[6:8, 6:8] = 0.005  # Roll and Pitch: Very low noise because the sub is known to stay flat.
-        self.Q[8, 8]     = 0.1    # Yaw (Heading): Moderate/Higher noise, as gyro drift affects heading independently.
+        R = self.get_parameter('sensor_noise.depth_variance').value
+        self.R_depth = np.array([[R]])
         # -----------------------------------------------------------------
         # 2. ROS 2 NETWORKING & COMMUNICATIONS
         # -----------------------------------------------------------------
@@ -59,14 +86,13 @@ class EKFLocalization(Node):
             depth=10
         )
 
-        self.imu_sub = self.create_subscription(Imu, '/model/bluerov2/conditioned_imu', self.imu_callback, sensor_qos)
+        #self.imu_sub = self.create_subscription(Imu, '/model/bluerov2/conditioned_imu', self.imu_callback, sensor_qos)
         #self.depth_sub = self.create_subscription(PoseWithCovarianceStamped, '/model/bluerov2/pose_depth', self.depth_callback, sensor_qos)
-        self.depth_sub = self.create_subscription(PoseWithCovarianceStamped, '/model/bluerov2/virtual_depth', self.depth_callback, sensor_qos)
-        self.odom_pub = self.create_publisher(Odometry, '/odometry/filtered', 10)
-        self.tf_broadcaster = TransformBroadcaster(self)
+        self.imu_sub = self.create_subscription(Imu, self.imu_topic, self.imu_callback, sensor_qos)
+        self.depth_sub = self.create_subscription(PoseWithCovarianceStamped, self.depth_topic, self.depth_callback, sensor_qos)
+        self.odom_pub = self.create_publisher(Odometry, self.odom_out_topic, 10)
 
         # Data Publications & Hardware Transforms
-        self.odom_pub = self.create_publisher(Odometry, '/odometry/filtered', 10)
         self.tf_broadcaster = TransformBroadcaster(self)
 
         self.z_sensor_reading = 0.0
@@ -82,7 +108,8 @@ class EKFLocalization(Node):
         
         dt = (current_time - self.last_time).nanoseconds / 1e9
  
-        if dt <= 0.0001:
+        # Hardened safety gate checking for clock micro-stutters
+        if dt < self.min_dt:
             return
 
         # Fire the mathematical prediction engine
@@ -115,6 +142,11 @@ class EKFLocalization(Node):
         qy = msg.orientation.y
         qz = msg.orientation.z
 
+        # Mathematical Guard: Block NaN or malformed quaternion streams from destabilizing transformations
+        if math.isnan(qw) or math.isnan(qx) or math.isnan(qy) or math.isnan(qz):
+            self.get_logger().error("NaN values identified in incoming IMU orientations. Skipping step pass.")
+            return
+        
         # 2. Convert Quaternion to Euler Angles for our State Vector
         sinr_cosp = 2 * (qw * qx + qy * qz)
         cosr_cosp = 1 - 2 * (qx * qx + qy * qy)
@@ -125,12 +157,9 @@ class EKFLocalization(Node):
 
         siny_cosp = 2 * (qw * qz + qx * qy)
         cosy_cosp = 1 - 2 * (qy * qy + qz * qz)
-        yaw = math.atan2(siny_cosp, cosy_cosp)
+        yaw = -math.atan2(siny_cosp, cosy_cosp)
 
-        # Store these directly in our 9x1 column vector source of truth
-        self.X[6, 0] = roll
-        self.X[7, 0] = pitch
-        self.X[8, 0] = yaw
+        
 
         # 3. Construct the 3D Rotation Matrix (Body-to-World)
         # Using standard Roll (phi), Pitch (theta), Yaw (psi) convention
@@ -167,10 +196,16 @@ class EKFLocalization(Node):
         self.X[1, 0] = self.X[1, 0] + (self.X[4, 0] * dt) + (0.5 * ay_world * dt**2)  # Position Y New = Old + Velocity*dt + 1/2*Acceleration*dt^2
         self.X[2, 0] = self.X[2, 0] + (self.X[5, 0] * dt) + (0.5 * az_world * dt**2)  # Position Z New = Old + Velocity*dt + 1/2*Acceleration*dt^2
 
-        # 2. Update Velocity States using Acceleration
+        #self.X[0, 0] = 0.0
+        #self.X[1, 0] = 0.0
         self.X[3, 0] = self.X[3, 0] + (ax_world * dt)  # Velocity X New = Old + Acceleration*dt
         self.X[4, 0] = self.X[4, 0] + (ay_world * dt)  # Velocity Y 
         self.X[5, 0] = self.X[5, 0] + (az_world * dt)  # Velocity Z
+
+        # Store these directly in our 9x1 column vector source of truth
+        self.X[6, 0] = roll 
+        self.X[7, 0] = pitch
+        self.X[8, 0] = yaw
 
         # Construct the State Transition Matrix (F)
         F = np.eye(9)
@@ -180,6 +215,7 @@ class EKFLocalization(Node):
 
         # 3. Covariance Prediction (Propagating Paranoia)
         self.P = np.dot(F, np.dot(self.P, F.T)) + self.Q * dt
+
       
 
         # 2. State Prediction (Kinematic Pass)
@@ -214,7 +250,7 @@ class EKFLocalization(Node):
 
         # 3. Define the Sensor Noise Covariance (R)
         # Matrix Dimensions: 1x1 (1 sensor measurement)
-        R = np.array([[0.25]])  # Variance of your physical depth sensor(how much noise the sensor has)
+        R = np.array([[0.05]])  # Variance of your physical depth sensor(how much noise the sensor has)
 
         # 4. Calculate the Innovation (y) - The Reality Gap
         # Matrix Dimensions: (1x1) - (1x1) = 1x1
@@ -226,8 +262,13 @@ class EKFLocalization(Node):
 
         # 6. Calculate the Full Kalman Gain Vector (K)
         # Matrix Dimensions: (9x9) * (9x1) * (1x1)^-1 = 9x1 Column Vector
-        K = np.dot(self.P, np.dot(H.T, np.linalg.inv(S)))
-
+        # Production Gain Inversion Guard: Guard against system singularities or infinite matrices
+        try:
+            K = np.dot(self.P, np.dot(H.T, np.linalg.inv(S)))
+        except np.linalg.LinAlgError:
+            self.get_logger().error("Matrix Inversion Singularity error detected inside correct_step. Bypassing state filter pass.")
+            return
+        
         # 7. Apply the Correction Step to our 9x1 State Vector Source of Truth
         self.X = self.X + np.dot(K, y)
 
@@ -242,26 +283,52 @@ class EKFLocalization(Node):
         """ Extracts system coordinates from master X array to publish native navigation messages """
         current_time = self.get_clock().now().to_msg()
 
+        # 1. Extract your full 3D Estimated Angles
+        r = self.X[6, 0]
+        p = self.X[7, 0]
+        y = self.X[8, 0]
+
+        # 2. Compute full 3D Quaternion Components (Euler to Quat)
+        cr = math.cos(r * 0.5)
+        sr = math.sin(r * 0.5)
+        cp = math.cos(p * 0.5)
+        sp = math.sin(p * 0.5)
+        cy = math.cos(y * 0.5)
+        sy = math.sin(y * 0.5)
+
+        qw = cr * cp * cy + sr * sp * sy
+        qx = sr * cp * cy - cr * sp * sy
+        qy = cr * sp * cy + sr * cp * sy
+        qz = cr * cp * sy - sr * sp * cy
+
         # Create and populate ROS 2 Odometry tracking packet
         odom = Odometry()
         odom.header.stamp = current_time
         odom.header.frame_id = 'odom'
         odom.child_frame_id = 'base_link_estimated'
         
-        # Position mappings
         odom.pose.pose.position.x = self.X[0, 0]
         odom.pose.pose.position.y = self.X[1, 0]
         odom.pose.pose.position.z = self.X[2, 0]
         
-        # Convert state Euler yaw back into a neat half-angle quaternion for ROS messages
-        cy = math.cos(self.X[8, 0] * 0.5)
-        sy = math.sin(self.X[8, 0] * 0.5)
-        odom.pose.pose.orientation.w = cy
-        odom.pose.pose.orientation.z = sy
+        # FIXED: Pass the full 3D spatial rotation coordinates down the pipeline
+        odom.pose.pose.orientation.w = qw
+        odom.pose.pose.orientation.x = qx
+        odom.pose.pose.orientation.y = qy
+        odom.pose.pose.orientation.z = qz
+
+        pose_covariance = [0.0] * 36
+        pose_covariance[0]  = float(self.P[0, 0])  # X variance
+        pose_covariance[7]  = float(self.P[1, 1])  # Y variance
+        pose_covariance[14] = float(self.P[2, 2])  # Z variance (P_zz)
+        pose_covariance[21] = float(self.P[6, 6])  # Roll variance
+        pose_covariance[28] = float(self.P[7, 7])  # Pitch variance
+        pose_covariance[35] = float(self.P[8, 8])  # Yaw variance
+        odom.pose.covariance = pose_covariance
         
         self.odom_pub.publish(odom)
 
-        # Broadcast identical structural coordinates to your TF tree transformation pipeline
+        # Broadcast identical coordinates to your TF tree transformation pipeline
         t = TransformStamped()
         t.header.stamp = current_time
         t.header.frame_id = 'odom'
@@ -269,8 +336,10 @@ class EKFLocalization(Node):
         t.transform.translation.x = self.X[0, 0]
         t.transform.translation.y = self.X[1, 0]
         t.transform.translation.z = self.X[2, 0]
-        t.transform.rotation.w = cy
-        t.transform.rotation.z = sy
+        t.transform.rotation.w = qw
+        t.transform.rotation.x = qx
+        t.transform.rotation.y = qy
+        t.transform.rotation.z = qz
         
         self.tf_broadcaster.sendTransform(t)
 

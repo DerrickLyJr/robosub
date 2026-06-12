@@ -11,5 +11,4 @@ log/
 *.pdf
 **/log/**
 *.pyc
-scripts/flight_controller.py
 *.env

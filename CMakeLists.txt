@@ -11,14 +11,15 @@ ament_auto_find_build_dependencies()
 
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 add_executable(teleop_node scripts/teleop_node.cpp)
-ament_target_dependencies(teleop_node rclcpp std_msgs)
+ament_target_dependencies(teleop_node rclcpp std_msgs geometry_msgs)
 
 find_package(sensor_msgs REQUIRED)
 
 add_executable(imu_listener scripts/imu_listener.cpp)
-ament_target_dependencies(imu_listener rclcpp sensor_msgs)
+ament_target_dependencies(imu_listener rclcpp sensor_msgs geometry_msgs)
 
 # Install launch files from the launch directory to the share directory
 install(DIRECTORY launch
@@ -46,6 +47,7 @@ install(PROGRAMS
   scripts/flight_controller.py
   scripts/pressure_bridge.py
   scripts/ground_truth_bridge.py
+  scripts/localization_validator.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

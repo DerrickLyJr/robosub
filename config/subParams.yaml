@@ -1,0 +1,62 @@
+# This YAML file contains the flight control parameters for the BlueROV2. 
+# It includes PID gains for depth and heading control, as well as safety limits for thruster efforts and time step sizes. 
+# Adjust these parameters based on your specific mission requirements and vehicle behavior observed during testing.
+bluerov_flight_controller:
+  ros__parameters:
+    # Sensor Topics
+    topics:
+      odometry: "/odometry/filtered"
+      cmd_vel: "/cmd_vel"
+    
+    # Heave (Depth) PID Gains
+    pid:
+      kp_z: 1.2
+      ki_z: 0.005
+      kd_z: 0.4
+      
+    # Heading (Yaw) PID Gains
+    yaw_pid:
+      kp_yaw: 1.5
+      ki_yaw: 0.0
+      kd_yaw: 0.3
+
+    # Structural Safety Limits
+    limits:
+      max_thruster_effort: 40.0
+      min_dt: 0.0001
+      max_dt: 0.1
+
+ekf_localization_node:
+  ros__parameters:
+    # Sensor Topic Registry
+    topics:
+      imu: "/model/bluerov2/conditioned_imu"
+      depth: "/model/bluerov2/virtual_depth"
+      odometry_out: "/odometry/filtered"
+
+    # Process Noise Covariance (Q-Matrix Diagonal Seeds)
+    # Tuning these higher tells the EKF to doubt its physics equations and drift faster
+    process_noise:
+      position_xy: 0.5 # X and Y: High uncertainty. The EKF must know it's drifting horizontally.
+      position_z: 0.1 # Z (Depth): Very low process noise. High trust in depth sensor
+
+      velocity_xy: 0.5 # Velocity in X and Y: High uncertainty. The EKF must know it's drifting horizontally.
+      velocity_z: 0.01 # Velocity in Z: Low process noise. The EKF should trust the physics model for vertical velocity.
+      orientation_roll_pitch: 0.005 # Roll and Pitch: Very low process noise. The EKF should trust the imu for roll and pitch.
+      orientation_yaw: 0.02 # Yaw: Moderate process noise. The EKF should somewhat trust the imu for yaw, but allow for some drift due to underwater currents and magnetic disturbances.
+
+    # Sensor Noise Covariance (R-Matrix Matrix Variance)
+    # Tuning this lower tells the EKF to trust the raw hardware sensor data over physics
+    sensor_noise:
+      depth_variance: 0.04
+
+    # Environmental Constants
+    environment:
+      gravity: 9.800
+      min_dt: 0.0001
+
+localization_validator_node:
+  ros__parameters:
+    topics:
+      truth: "/world/bluerov2_underwater/dynamic_pose/info"  # Direct Gazebo Truth
+      estimate: "/odometry/filtered"                         # Your EKF Output

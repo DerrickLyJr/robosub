@@ -6,6 +6,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     pkg_path = get_package_share_directory('bluerov2_gz')
     sdf_file = os.path.join(pkg_path, 'models', 'bluerov2', 'model.sdf')
+    config_file = os.path.join(pkg_path, 'config', 'subParams.yaml')
 
     with open(sdf_file, 'r') as infp:
         robot_description_content = infp.read()
@@ -135,11 +136,20 @@ def generate_launch_description():
     My_localization_Master = Node(
         package='bluerov2_gz',
         executable='ekf_9dof_localizer.py',
-        name='localization_master',
+        name='ekf_localization_node',
         output='screen',
         parameters=[{'use_sim_time': True,
-                     'depth_topic': '/world/bluerov2_underwater/dynamic_pose/info'}] # Added
+                     'depth_topic': '/world/bluerov2_underwater/dynamic_pose/info'},
+                     config_file] # Added
     )  
+
+    localization_validator_node = Node(
+        package='bluerov2_gz',
+        executable='localization_validator.py',
+        name='localization_validator_node',
+        output='screen',
+        parameters=[config_file]
+    )
 
     localization_Master = Node(
         package='bluerov2_gz',
@@ -177,7 +187,8 @@ def generate_launch_description():
         package='bluerov2_gz',
         executable='flight_controller.py',
         name='bluerov_flight_controller',
-        output='screen'
+        output='screen',
+        parameters=[config_file] # Added
     )
     
     
@@ -191,8 +202,9 @@ def generate_launch_description():
         #map_to_odom,
         depth_calc,
         teleop,
-        camera,
+        #camera,
         #pressure_Bridge,
         My_localization_Master,
+        localization_validator_node,
         ground_truth_node
     ])
