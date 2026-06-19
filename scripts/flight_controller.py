@@ -47,7 +47,7 @@ class BlueROVFlightController(Node):
         # --- PID TARGET REGISTERS ---
         # Starts targeted exactly at your initialization tare resting waterline
         self.target_depth = -2.0  
-        self.target_yaw = 3.14
+        self.target_yaw = 0.0
    
 
         # --- CONTROLLER MEMORY CACHES ---

@@ -61,7 +61,7 @@ class LocalizationValidator(Node):
             nis_z = 0.0
             consistency_status = "UNKNOWN"
 
-        self.get_logger().info(
+        """self.get_logger().info(
             f"\n"
             f"============================================================\n"
             f"             BLUEROV2 AUTONOMY EVALUATION SCORECARD         \n"
@@ -74,7 +74,7 @@ class LocalizationValidator(Node):
             f" NIS Metric        : {nis_z:7.3f}\n"
             f" Filter Status     : {consistency_status}\n"
             f"============================================================"
-        )
+        )"""
 
 def main(args=None):
     rclpy.init(args=args)

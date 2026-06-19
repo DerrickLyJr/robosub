@@ -20,8 +20,8 @@ class StereoVisionNode(Node):
         self.load_calibration()
 
         # Subscribers for the topics you found in Gazebo
-        self.left_sub = message_filters.Subscriber(self, Image, '/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/right_camera/image')
-        self.right_sub = message_filters.Subscriber(self, Image, '/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/left_camera/image')
+        self.right_sub = message_filters.Subscriber(self, Image, '/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/right_camera/image')
+        self.left_sub = message_filters.Subscriber(self, Image, '/world/bluerov2_underwater/model/bluerov2/link/base_link/sensor/left_camera/image')
         
         # Syncing the frames (Simulation needs a small 'slop' for timing)
         self.ts = message_filters.ApproximateTimeSynchronizer(

@@ -126,6 +126,14 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}] # Added
     )
 
+    camera_math_tester = Node(
+        package='bluerov2_gz',
+        executable='VisionLocalMath.py',
+        name='robosub_stereo_tracker',
+        output='screen',
+        parameters=[{'use_sim_time': True}] # Added
+    )
+
     pressure_Bridge = Node(
         package='bluerov2_gz',
         executable='pressure_bridge.py',
@@ -202,6 +210,7 @@ def generate_launch_description():
         #map_to_odom,
         depth_calc,
         teleop,
+        camera_math_tester,
         #camera,
         #pressure_Bridge,
         My_localization_Master,

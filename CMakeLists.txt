@@ -48,6 +48,7 @@ install(PROGRAMS
   scripts/pressure_bridge.py
   scripts/ground_truth_bridge.py
   scripts/localization_validator.py
+  scripts/VisionLocalMath.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

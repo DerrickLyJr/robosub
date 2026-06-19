@@ -2,6 +2,7 @@
 
 import os
 
+from geometry_msgs import msg
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
@@ -16,11 +17,26 @@ class EKFLocalization(Node):
     def __init__(self):
         super().__init__('ekf_localization_node')
 
+         # -----------------------------------------------------------------
+        # 2. ROS 2 NETWORKING & COMMUNICATIONS
+        # -----------------------------------------------------------------
+        # Best-Effort QoS profile to safely handle high-rate simulator feeds
+        sensor_qos = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10
+        )
+
         self.declare_parameter('topics.imu', '/model/bluerov2/conditioned_imu')
         self.declare_parameter('topics.depth', '/model/bluerov2/virtual_depth')
         self.declare_parameter('topics.odometry_out', '/odometry/filtered')
         #self.declare_parameter('topics.depth', '/world/bluerov2_underwater/dynamic_pose/info')
+        # Add this inside EKFLocalization.__init__:
+        self.declare_parameter('topics.vision_pose', '/vision/pose_estimate')
+        self.vision_pose_topic = self.get_parameter('topics.vision_pose').value
+
         
+
         self.declare_parameter('process_noise.position_xy', 0.05)
         self.declare_parameter('process_noise.position_z', 0.001)
         self.declare_parameter('process_noise.velocity_xy', 0.15)
@@ -76,22 +92,19 @@ class EKFLocalization(Node):
 
         R = self.get_parameter('sensor_noise.depth_variance').value
         self.R_depth = np.array([[R]])
-        # -----------------------------------------------------------------
-        # 2. ROS 2 NETWORKING & COMMUNICATIONS
-        # -----------------------------------------------------------------
-        # Best-Effort QoS profile to safely handle high-rate simulator feeds
-        sensor_qos = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=10
-        )
+       
 
         #self.imu_sub = self.create_subscription(Imu, '/model/bluerov2/conditioned_imu', self.imu_callback, sensor_qos)
         #self.depth_sub = self.create_subscription(PoseWithCovarianceStamped, '/model/bluerov2/pose_depth', self.depth_callback, sensor_qos)
         self.imu_sub = self.create_subscription(Imu, self.imu_topic, self.imu_callback, sensor_qos)
         self.depth_sub = self.create_subscription(PoseWithCovarianceStamped, self.depth_topic, self.depth_callback, sensor_qos)
         self.odom_pub = self.create_publisher(Odometry, self.odom_out_topic, 10)
-
+        self.vision_sub = self.create_subscription(
+            PoseWithCovarianceStamped, 
+            self.vision_pose_topic, 
+            self.vision_pose_callback, 
+            sensor_qos
+        )
         # Data Publications & Hardware Transforms
         self.tf_broadcaster = TransformBroadcaster(self)
 
@@ -101,6 +114,46 @@ class EKFLocalization(Node):
 
         self.last_time = self.get_clock().now()
         self.get_logger().info("BlueROV2 Master 9-DoF EKF Engine Active and Online.")
+
+    def vision_pose_callback(self, msg):
+        """ Multi-channel update gate capturing absolute 2D/3D positioning inputs """
+        # Extract structural measurement inputs
+        z_x = msg.pose.pose.position.x
+        z_y = msg.pose.pose.position.y
+        z_z = msg.pose.pose.position.z
+
+        Z = np.array([[z_x], 
+                    [z_y], 
+                    [z_z]])
+
+        # Observation Matrix (H) - maps the 3 sensor inputs directly to the 9 state parameters
+        H = np.zeros((3, 9))
+        H[0, 0] = 1.0  # Links to State X
+        H[1, 1] = 1.0  # Links to State Y
+        H[2, 2] = 1.0  # Links to State Z
+
+        # Extract dynamic variance properties directly from the incoming message envelope
+        r_x = msg.pose.covariance[0]
+        r_y = msg.pose.covariance[7]
+        r_z = msg.pose.covariance[14]
+        
+        R = np.array([
+            [r_x, 0.0, 0.0],
+            [0.0, r_y, 0.0],
+            [0.0, 0.0, r_z]
+        ])
+
+        # Standard EKF Core Engine Matrix Correction Pass
+        y = Z - np.dot(H, self.X)  # Innovation vector
+        S = np.dot(H, np.dot(self.P, H.T)) + R 
+        
+        try:
+            K = np.dot(self.P, np.dot(H.T, np.linalg.inv(S)))
+            self.X = self.X + np.dot(K, y)
+            I = np.eye(9)
+            self.P = np.dot((I - np.dot(K, H)), self.P)
+        except np.linalg.LinAlgError:
+            self.get_logger().error("Matrix singularity lock encountered in vision processing pass.")
 
     def imu_callback(self, msg):
         """ High-Rate Prediction Phase triggered by every incoming IMU telemetry data packet """

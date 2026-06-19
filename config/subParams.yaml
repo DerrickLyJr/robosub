@@ -37,8 +37,8 @@ ekf_localization_node:
     # Process Noise Covariance (Q-Matrix Diagonal Seeds)
     # Tuning these higher tells the EKF to doubt its physics equations and drift faster
     process_noise:
-      position_xy: 0.5 # X and Y: High uncertainty. The EKF must know it's drifting horizontally.
-      position_z: 0.1 # Z (Depth): Very low process noise. High trust in depth sensor
+      position_xy: 0.05 # X and Y: High uncertainty. The EKF must know it's drifting horizontally.
+      position_z: 0.01 # Z (Depth): Very low process noise. High trust in depth sensor
 
       velocity_xy: 0.5 # Velocity in X and Y: High uncertainty. The EKF must know it's drifting horizontally.
       velocity_z: 0.01 # Velocity in Z: Low process noise. The EKF should trust the physics model for vertical velocity.
